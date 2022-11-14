@@ -7,34 +7,30 @@ import java.util.Objects;
 import com.skilldistillery.cards.Card;
 
 public abstract class Hand {
+
 	
-	private int value;
-	
-	List<Card> numCards = new ArrayList<>();
+	List<Card> hand = new ArrayList<>();
 	
 	public Hand() {
-		System.out.println("add text");
+		System.out.println();
 	}
 	
 	public void addCard(Card card) {
-		Hand.add(card);
-		
 	}
 	
 	public void clear() {
-		
 	}
 	
 	public abstract int getHandValue();
 
 	@Override
 	public String toString() {
-		return "Hand [numCards=" + numCards + "]";
+		return "Hand [cards=" + hand + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(numCards);
+		return Objects.hash(hand);
 	}
 
 	@Override
@@ -46,7 +42,7 @@ public abstract class Hand {
 		if (getClass() != obj.getClass())
 			return false;
 		Hand other = (Hand) obj;
-		return Objects.equals(numCards, other.numCards);
+		return Objects.equals(hand, other.hand);
 	}
 
 }

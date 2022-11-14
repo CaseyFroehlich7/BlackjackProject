@@ -1,17 +1,21 @@
 package com.skilldistillery.players;
 
-import com.skilldistillery.cardgame.Hand;
-import com.skilldistillery.cards.Card;
+import com.skilldistillery.cardgame.BlackjackHand;
 import com.skilldistillery.cards.Deck;
 
 public class Dealer extends Player {
-// a dealer is "kind of player" EXTENDS
-	private Hand hand;
-	private Deck deck;
+	Deck deck = new Deck();
+	BlackjackHand hand = new BlackjackHand();
 	
-	public Card dealCard() {
-
-		Card card = null;
-		// dealer controls deck of cards 
+	public Dealer() {
+		deck.shuffle();
+		deck.createDeck();
+		deck.checkDeckSize();
+		
 	}
+	
+	public BlackjackHand getHand() {
+		return hand;
+	}
+	
 }

@@ -40,6 +40,6 @@ public class Card {
 		Card other = (Card) obj;
 		return rank == other.rank && suit == other.suit;
 	}
-	
+
 	
 }

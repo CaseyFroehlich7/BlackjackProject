@@ -7,8 +7,8 @@ public enum Rank {
 
 	private int value;
 	
-	Rank(int val) {
-		this.value = val;
+	Rank(int value) {
+		this.value = value;
 	}
 	
 	 public int getValue() {
